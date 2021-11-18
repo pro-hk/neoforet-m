@@ -3,21 +3,19 @@
 
 .titleBox {
   line-height: 1.5;
-
   h2 {
-    margin-bottom: 50px;
-    font-size: $h2;
+    margin-bottom: 20px;
+    font-size: $large-size;
     font-weight: 600;
   }
   p {
-    font-size: $medium-size;
+    font-size: $normal-size;
   }
 }
 .btns {
   display: flex;
   justify-content: center;
   .btn {
-    display: flex;
     &.center {
       justify-content: center;
     }
@@ -27,16 +25,10 @@
     border: 1px solid $border-color;
     border-radius: 100px;
     @include flexCenter();
-    transition: 0.25s;
-  }
-  .transition:hover {
-    background-color: $text-color;
-    border-color: $text-color;
-    color: $white-color;
   }
   .large {
-    height: 60px;
-    padding: 0 50px;
+    width: 100%;
+    padding: 15px 50px;
   }
 }
 // 버튼은 크기가 일정
@@ -59,6 +51,7 @@
       }
     }
     .slogan {
+      width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -67,32 +60,24 @@
       text-align: center;
       transform: translate(-50%, -50%);
       .main {
-        font-size: $xx-large-size;
+        font-size: 40px;
         text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-        font-weight: 700;
+        font-weight: 500;
       }
       .sub {
-        margin-top: 3rem;
-        font-size: $large-size;
+        margin-top: 20px;
+        font-size: $medium-size;
       }
       a {
         display: inline-flex;
-        margin-top: 5rem;
-        padding: 20px 40px;
+        margin-top: 30px;
+        padding: 10px 20px;
         border: 1px solid $white-color;
         transition: 0.25s;
         align-items: center;
         border-radius: 100px;
-        &:hover {
-          color: $white-color;
-          background-color: $main-color;
-          border-color: $main-color;
-          span {
-            color: $white-color;
-          }
-        }
         span {
-          margin-left: 2rem;
+          margin-left: 5px;
           color: $main-color;
         }
       }
@@ -127,22 +112,21 @@
     .list {
       li {
         position: relative;
+        img {
+          width: 100%;
+        }
         a {
           position: absolute;
-          right: 50px;
-          bottom: 50px;
-          padding: 15px 30px;
-          border: 1px solid $white-color;
+          left: 10px;
+          bottom: 40px;
+          padding: 5px 10px;
+          border: 1px solid $border-color;
           transition: 0.25s;
           border-radius: 100px;
           @include flexCenter();
           span {
-            margin-left: 20px;
+            margin-left: 10px;
             color: $main-color;
-          }
-          &:hover {
-            color: $white-color;
-            background-color: $text-color;
           }
         }
       }
@@ -157,7 +141,7 @@
         background-color: $white-color;
         border-radius: 0;
         border: none;
-        @include box(100px);
+        @include box(30px);
         @include flexCenter();
         span {
           font-size: $x-large-size;
@@ -167,92 +151,82 @@
   }
   // product end
   #news {
-    padding: 100px 0;
+    padding: 50px 0;
     .contents {
-      width: 1440px;
-      margin: auto;
+      box-sizing: border-box;
+      padding: 20px;
+      overflow: hidden;
+      .titleBox {
+        text-align: center;
+      }
       .list {
         display: flex;
         justify-content: space-between;
         li {
-          width: 31.33%;
           margin-top: 50px;
           a {
+            height: 300px;
             display: block;
             position: relative;
-            overflow: hidden;
             border: 1px solid $light-gray-color;
-            border-radius: 20px;
-            transition: 0.25s;
-            &:hover {
-              box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-              .img {
-                transform: scale(1.1);
-              }
-              .txtBox {
-                bottom: 0;
-              }
-            }
-            &::before {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            &:before {
               content: "";
               display: block;
               padding-top: 80%;
             }
             // padding-top: 100% -> width의 100%(정사각형) - 반응형에 씀
             .img {
-              width: 100%;
-              height: 100%;
+              @include box(100%);
               position: absolute;
               top: 0;
               left: 0;
               background-repeat: no-repeat;
               background-position: 50%;
               background-size: cover;
-              transition: 0.25s;
             }
             .txtBox {
               position: absolute;
               left: 0;
-              bottom: -50px;
+              bottom: -30px;
               width: 100%;
               background-color: $white-color;
               padding: 30px;
               box-sizing: border-box;
-              transition: 0.25s;
+              word-break: keep-all;
               h3 {
-                font-size: $h3;
+                font-size: $medium-size;
                 @include multiEllipsis();
-                margin-bottom: 30px;
+                margin-bottom: 20px;
               }
-              .date {
-                margin-bottom: 30px;
+              p {
+                color: darken($light-gray-color, 20);
+                margin-bottom: 20px;
               }
               .txt {
-                @include ellipsis();
+                @include multiEllipsis();
               }
             }
           }
         }
       }
       .btns {
-        margin-top: 50px;
+        margin-top: 30px;
       }
     }
   }
   // news end
   #cs {
     .contents {
-      width: 1440px;
-      margin: auto;
       ul {
-        display: flex;
-        justify-content: space-between;
         li {
-          width: 49%;
           background-repeat: no-repeat;
           background-size: cover;
           border-radius: 10px;
           overflow: hidden;
+          margin-bottom: 30px;
           &:nth-child(1) {
             background-image: url(../images/main/bg_contact.jpg);
           }
@@ -261,28 +235,30 @@
           }
           a {
             display: flex;
-            height: 150px;
+            height: 100px;
             justify-content: space-between;
             align-items: center;
             padding: 0 30px;
             .txtBox {
+              font-size: $normal-size;
               color: $white-color;
               strong {
-                font-size: $large-size;
+                font-size: $medium-size;
                 display: block;
                 margin-bottom: 10px;
               }
             }
             .btn {
               @include flexCenter();
+              @include box(30px);
               background-color: $text-color;
               color: $white-color;
-              padding: 10px 20px;
               border-radius: 100px;
-              font-size: $normal-size;
+              font-size: 0;
               span {
                 color: $main-color;
-                margin-left: 10px;
+                font-size: $normal-size;
+                font-weight: 700;
               }
             }
           }
@@ -293,13 +269,3 @@
   // cs end
 }
 // main end
-
-@media screen and (max-width: 1440px) {
-  #main {
-    #news {
-      .contents {
-        width: 100%;
-      }
-    }
-  }
-}

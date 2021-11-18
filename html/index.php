@@ -65,8 +65,8 @@
         </h2>
         <p>무림은 최고의 기술로 생활의 가치를 더하고 있습니다.</p>
       </div>
-      <ul class="list">
-        <li>
+      <ul class="list swiper-wrapper">
+        <li class="swiper-slide">
           <a href="">
             <div class="img" style="background-image: url(../images/main/news01.jpg)"></div>
             <div class="txtBox">
@@ -76,7 +76,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class="swiper-slide">
           <a href="">
             <div class="img" style="background-image: url(../images/main/news02.jpg)"></div>
             <div class="txtBox">
@@ -86,7 +86,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li class="swiper-slide">
           <a href="">
             <div class="img" style="background-image: url(../images/main/news03.jpg)"></div>
             <div class="txtBox">

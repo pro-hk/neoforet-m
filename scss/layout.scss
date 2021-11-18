@@ -30,250 +30,237 @@ button {
   width: 100%;
   position: fixed;
   z-index: 100;
-  color: $white-color;
   top: 0;
-  &:hover {
-    color: $text-color;
-    background-color: $white-color;
-    #logo a {
-      .color {
-        display: block;
-      }
-      .white {
-        display: none;
-      }
-    }
-  }
   // display: flex;
   // justify-content: space-between;
   #logo {
     position: absolute;
-    left: 50px;
+    left: 20px;
+    top: 20px;
     a {
-      display: flex;
-      height: 100px;
-      align-items: center;
+      // display: flex;
+      height: 20px;
+      // align-items: center;
+      img {
+        width: 130px;
+      }
       .color {
         display: none;
       }
     }
   }
-  #gnb {
-    .list {
-      display: flex;
-      justify-content: center;
-      > li {
-        &:hover {
+  .menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    background-color: $white-color;
+    transition: 0.5s;
+    padding-top: 60px;
+    &.on {
+      left: 0;
+    }
+    #gnb {
+      .list {
+        padding: 0 20px;
+        > li {
           > a {
-            color: $hover-color;
-            &:after {
-              transform: scaleX(1);
-            }
+            display: flex;
+            height: 60px;
+            position: relative;
+            font-size: $medium-size;
+            align-items: center;
+            font-weight: 500;
+            border-bottom: 2px solid $light-gray-color;
+            // &:after {
+            //   height: 3px;
+            //   top: 65px;
+            //   right: 50px;
+            //   left: 50px;
+            //   // transform: scaleX(0);
+            //   // transition: 0.5s ease;
+            //   background-color: $main-color;
+            //   transform-origin: 0 50%;
+            //   @include pseudo();
+            // }
           }
           .depth02 {
-            display: flex;
-          }
-        }
-        > a {
-          display: flex;
-          height: 100px;
-          position: relative;
-          padding: 0 50px;
-          font-size: $medium-size;
-          transition: 0.25s ease;
-          justify-content: center;
-          align-items: center;
-          font-weight: 500;
-          &:after {
-            height: 3px;
-            top: 65px;
-            right: 50px;
-            left: 50px;
-            transform: scaleX(0);
-            transition: 0.5s ease;
-            background-color: $main-color;
-            transform-origin: 0 50%;
-            @include pseudo();
-          }
-        }
-        .depth02 {
-          display: none;
-          width: 100%;
-          position: absolute;
-          left: 0;
-          background-color: $light-gray-color;
-          justify-content: center;
-          li {
-            a {
-              display: flex;
-              height: 60px;
-              padding: 0 30px;
-              justify-content: center;
-              align-items: center;
+            width: 100%;
+            li {
+              display: none;
+              a {
+                display: flex;
+                height: 40px;
+                padding: 0 20px;
+                align-items: center;
+                border-bottom: 1px solid $light-gray-color;
+              }
             }
+          }
+        }
+      }
+    }
+    .etc {
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+      .sns {
+        margin-bottom: 80px;
+        button {
+          display: none;
+        }
+        ul {
+          display: flex;
+          justify-content: space-between;
+          //padding: 0 20px;
+          li {
+            width: 20%;
+            //background: #f00;
+            position: relative;
+            &:before {
+              content: "";
+              display: block;
+              padding-top: 100%;
+            }
+            a {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              font-size: 0;
+              &:before {
+                background-image: url(../images/layout/m_utility.png);
+                @include pseudo();
+                @include box(50px);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-size: 250px;
+              }
+            }
+            &:nth-child(1) a:before {
+              background-position: 0 0;
+            }
+            &:nth-child(2) a:before {
+              background-position: -50px 0;
+            }
+            &:nth-child(3) a:before {
+              background-position: -100px 0;
+            }
+            &:nth-child(4) a:before {
+              background-position: -150px 0;
+            }
+            &:nth-child(5) a:before {
+              background-position: -200px 0;
+            }
+            //정렬이 안되는데 어떻게 해야될지 모르겠어요
+          }
+        }
+      }
+      .language {
+        @include flexCenter();
+        button {
+          display: flex;
+          align-items: center;
+          padding: 10px 30px;
+          border: 2px solid $light-gray-color;
+          border-radius: 100px;
+          span {
+            color: $main-color;
+            margin-right: 10px;
           }
         }
       }
     }
   }
-  .etc {
-    display: flex;
-    height: 100px;
+  .menuBar {
+    @include box(30px);
     position: absolute;
-    top: 0;
-    right: 50px;
-    text-transform: uppercase;
-    align-items: center;
-    .item:hover {
-      button {
-        color: $hover-color;
-        border: 1px solid #eee;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        background-color: #fff;
+    right: 20px;
+    top: 20px;
+    &.on {
+      > span {
+        z-index: -1;
       }
-      ul {
+      p {
         display: block;
-        margin-top: -5px;
-        border: 1px solid #eee;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-        li:hover {
-          color: $hover-color;
-        }
       }
     }
-    button {
-      width: 80px;
-      height: 50px;
-      position: relative;
-      font-size: 1.6rem;
-      text-transform: uppercase;
-      border-bottom: none;
-      border-radius: 5px 5px 0 0;
-      // transition: 0.25s;
-      cursor: pointer;
-    }
-    ul {
-      display: none;
+    > span {
       position: absolute;
-      padding: 20px;
-      transition: 0.25s;
-      background-color: $white-color;
-      border-radius: 0 0 5px 5px;
-      &::before {
-        width: 78px;
-        height: 5px;
-        top: -2px;
-        left: 0;
-        background-color: $white-color;
-        @include pseudo();
+      width: 25px;
+      height: 2px;
+      background-color: darken($white-color, 10);
+      border-radius: 100px;
+      left: 2px;
+      &:nth-child(1) {
+        top: 7px;
       }
-      li {
-        a {
-          display: block;
-          min-width: 80px;
-        }
+      &:nth-child(2) {
+        top: 14px;
+      }
+      &:nth-child(3) {
+        top: 21px;
       }
     }
-    .sns {
-      li {
-        &:nth-child(1):hover a::before {
-          background-position: 0 -50px;
-        }
-        &:nth-child(2):hover a::before {
-          background-position: -50px -50px;
-        }
-        &:nth-child(3):hover a::before {
-          background-position: -100px -50px;
-        }
-        &:nth-child(4):hover a::before {
-          background-position: -150px -50px;
-        }
-        &:nth-child(5):hover a::before {
-          background-position: -200px -50px;
-        }
-        a {
-          display: block;
-          position: relative;
-          padding: 10px 0 10px 30px;
-          font-size: 1.4rem;
-          &::before {
-            left: 0;
-            background-image: url(../images/layout/utility.png);
-            @include pseudo();
-            @include box(32px, 18px);
-          }
-        }
-        &:nth-child(1) a:before {
-          background-position: 0 0;
-        }
-        &:nth-child(2) a:before {
-          background-position: -50px 0;
-        }
-        &:nth-child(3) a:before {
-          background-position: -100px 0;
-        }
-        &:nth-child(4) a:before {
-          background-position: -150px 0;
-        }
-        &:nth-child(5) a:before {
-          background-position: -200px 0;
-        }
-      }
-    }
-    .language ul {
-      padding: 20px 0;
-      li {
-        a {
-          padding: 10px 0 10px 30px;
-        }
-      }
+    p {
+      @include absCenter();
+      display: none;
     }
   }
 }
 // header end
 
 #footer {
-  margin-top: 100px;
-  padding: 50px 0;
+  margin-top: 50px;
+  padding: 50px 10px;
   background-color: $light-gray-color;
   .contents {
-    width: 1440px;
-    margin: auto;
-    position: relative;
     font-size: $normal-size;
+    text-align: center;
     .addressBox {
       color: #999;
       .logo {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+        img {
+          width: 130px;
+        }
       }
       address {
         .info {
-          position: relative;
+          span {
+            display: block;
+            margin-bottom: 5px;
+            &:nth-of-type(3) {
+              margin-bottom: 20px;
+            }
+          }
           a {
             font-weight: 700;
           }
         }
-        .info * {
-          margin-right: 10px;
-        }
         .copyright {
           margin-top: 20px;
+          font-size: $small-size;
         }
       }
-    }
-    .link {
-      position: absolute;
-      right: 0;
-      top: 0;
-      border-radius: 100px;
-      padding: 10px 20px;
-      background-color: $text-color;
-      color: $white-color;
-      display: flex;
-      align-items: center;
-      span {
-        color: #999;
-        transform: rotate(-45deg);
+      .link,
+      .personalinfo {
+        border-radius: 100px;
+        padding: 10px 20px;
+        background-color: $text-color;
+        color: $white-color;
+        @include flexCenter();
+        margin-bottom: 20px;
+        span {
+          color: $main-color;
+          font-size: $small-size;
+          font-weight: 700;
+          transform: rotate(-45deg);
+          margin-left: 5px;
+        }
       }
     }
   }
