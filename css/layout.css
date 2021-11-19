@@ -10,15 +10,15 @@ button { background: none; border: none; outline: none; }
 
 #header { width: 100%; position: fixed; z-index: 100; top: 0; }
 
-#header #logo { position: absolute; left: 20px; top: 20px; }
+#header #logo { position: absolute; left: 20px; }
 
-#header #logo a { height: 20px; }
+#header #logo a { display: -webkit-box; display: -ms-flexbox; display: flex; height: 50px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-#header #logo a img { width: 130px; }
+#header #logo a img { height: 25px; }
 
 #header #logo a .color { display: none; }
 
-#header .menu { position: fixed; width: 100%; top: 0; bottom: 0; left: 100%; background-color: #fff; -webkit-transition: 0.5s; transition: 0.5s; padding-top: 60px; }
+#header .menu { position: fixed; width: 100%; height: 100%; left: 100%; background-color: #fff; -webkit-transition: 0.5s; transition: 0.5s; padding-top: 60px; }
 
 #header .menu.on { left: 0; }
 
@@ -26,15 +26,15 @@ button { background: none; border: none; outline: none; }
 
 #header .menu #gnb .list > li > a { display: -webkit-box; display: -ms-flexbox; display: flex; height: 60px; position: relative; font-size: 1.8rem; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-weight: 500; border-bottom: 2px solid #f5f5f5; }
 
-#header .menu #gnb .list > li .depth02 { width: 100%; }
+#header .menu #gnb .list > li .depth02 { padding: 0 20px; display: none; }
 
-#header .menu #gnb .list > li .depth02 li { display: none; }
+#header .menu #gnb .list > li .depth02 li a { display: -webkit-box; display: -ms-flexbox; display: flex; height: 40px; padding: 0 20px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-bottom: 1px solid #f5f5f5; font-size: 1.4rem; }
 
-#header .menu #gnb .list > li .depth02 li a { display: -webkit-box; display: -ms-flexbox; display: flex; height: 40px; padding: 0 20px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border-bottom: 1px solid #f5f5f5; }
+#header .menu #gnb .list > li .depth02.on { display: block; }
 
 #header .menu .etc { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-transform: uppercase; }
 
-#header .menu .etc .sns { margin-bottom: 80px; }
+#header .menu .etc .sns { margin: 50px; }
 
 #header .menu .etc .sns button { display: none; }
 

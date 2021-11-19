@@ -34,8 +34,16 @@ const newsSlider = new Swiper("#news .contents", {
 
 const menuBar = document.querySelector(".menuBar");
 const menu = document.querySelector(".menu");
-console.log(menu);
-menuBar.addEventListener("click", function () {
+menuBar.addEventListener("click", () => {
   menu.classList.toggle("on");
   menuBar.classList.toggle("on");
+});
+// 'function()' = '=>' (애로우펑션)
+
+const depth01 = document.querySelector(".depth01");
+const depth02 = document.querySelector(".depth02");
+console.log(depth01);
+depth01.addEventListener("click", function () {
+  depth01.classList.toggle("on");
+  depth02.classList.toggle("on");
 });

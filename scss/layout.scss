@@ -36,13 +36,12 @@ button {
   #logo {
     position: absolute;
     left: 20px;
-    top: 20px;
     a {
-      // display: flex;
-      height: 20px;
-      // align-items: center;
+      display: flex;
+      height: 50px;
+      align-items: center;
       img {
-        width: 130px;
+        height: 25px;
       }
       .color {
         display: none;
@@ -52,8 +51,9 @@ button {
   .menu {
     position: fixed;
     width: 100%;
-    top: 0;
-    bottom: 0;
+    height: 100%;
+    // top: 0;
+    // bottom: 0;
     left: 100%;
     background-color: $white-color;
     transition: 0.5s;
@@ -86,16 +86,20 @@ button {
             // }
           }
           .depth02 {
-            width: 100%;
+            padding: 0 20px;
+            display: none;
             li {
-              display: none;
               a {
                 display: flex;
                 height: 40px;
                 padding: 0 20px;
                 align-items: center;
                 border-bottom: 1px solid $light-gray-color;
+                font-size: $normal-size;
               }
+            }
+            &.on {
+              display: block;
             }
           }
         }
@@ -106,7 +110,7 @@ button {
       flex-direction: column;
       text-transform: uppercase;
       .sns {
-        margin-bottom: 80px;
+        margin: 50px;
         button {
           display: none;
         }
@@ -122,6 +126,7 @@ button {
               content: "";
               display: block;
               padding-top: 100%;
+              // %로 정사각형 만들 때 쓰는 방법
             }
             a {
               position: absolute;
@@ -155,7 +160,6 @@ button {
             &:nth-child(5) a:before {
               background-position: -200px 0;
             }
-            //정렬이 안되는데 어떻게 해야될지 모르겠어요
           }
         }
       }
