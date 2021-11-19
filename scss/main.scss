@@ -79,11 +79,13 @@
       a {
         display: inline-flex;
         margin-top: 5rem;
-        padding: 20px 40px;
+        padding: 10px 20px;
         border: 1px solid $white-color;
         transition: 0.25s ease;
         border-radius: 100px;
         align-items: center;
+        white-space: nowrap;
+        font-size: $normal-size;
 
         &:hover {
           color: $text-color;
@@ -187,6 +189,7 @@
       text-align: center;
     }
     .contents {
+      margin: auto;
       .list {
         margin-top: 50px;
         li {
