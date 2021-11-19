@@ -1,69 +1,56 @@
 @import "vars";
 @import "mixins";
 
-// contents 크기 :  작은 모니터 위하면 1200px, 보통은 1440px, 크면 1600px
 #subContentsWrap {
   margin-top: 160px;
   padding: 100px 0;
-  .subContents {
-    margin: 0 auto;
+  #contents {
     width: 1440px;
-    .breadCrumb {
-      ul {
+    margin: 0 auto;
+  }
+}
+.breadCrumb {
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      &:nth-child(1) {
+        a:before {
+          display: none;
+        }
+      }
+      a {
         display: flex;
-        align-items: center;
-        // color: $border-color;
-        li {
-          &:last-child {
-            a {
-              text-decoration: underline;
-              &:after {
-                display: none;
-              }
-            }
-          }
-          a {
-            display: flex;
-            align-items: center;
-            font-size: $normal-size;
-            &:after {
-              font-family: "Material Icons";
-              content: "\e5cc";
-              padding: 0 10px;
-            }
-          }
+        &:before {
+          font-family: "Material Icons";
+          content: "chevron_right";
+          display: block;
+          padding: 0 10px;
         }
       }
     }
   }
-  .subTitle {
-    font-size: $xx-large-size;
-    font-weight: 500;
-    margin: 50px 0;
-  }
-  #lnb {
-    ul {
-      display: flex;
-      li {
-        margin-right: 20px;
-        &.on a {
-          color: $white-color;
-          background-color: $main-color;
-          font-weight: 500;
-        }
-        a {
-          display: block;
-          padding: 20px 40px;
-          // color: $border-color;
-          transition: 0.25s;
-          border-radius: 100px;
-        }
-        &:hover a {
-          background-color: $light-gray-color;
-          &:last-child {
-            color: $text-color;
-          }
-        }
+}
+.subTitle {
+  font-size: $xx-large-size;
+  font-weight: 500;
+  margin: 50px 0;
+}
+#lnb {
+  ul {
+    display: flex;
+    li {
+      margin-right: 20px;
+      &.on a {
+        background-color: $main-color;
+        color: #fff;
+        font-weight: 500;
+      }
+      a {
+        display: block;
+        padding: 20px 40px;
+        background-color: $light-gray-color;
+        border-radius: 100px;
       }
     }
   }

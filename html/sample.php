@@ -1,111 +1,107 @@
-<? include("../include/header.html") ?>
+<? include("../include/header.html"); ?>
 <div id="subContentsWrap">
-  <div class="subContents">
-    <div class="breadCrumb">
-      <ul>
-        <li>
-          <a href=""><span class="material-icons"> home </span></a>
-        </li>
-        <li><a href="">고객지원</a></li>
-        <li><a href="">샘플신청</a></li>
-      </ul>
-    </div>
-    <h2 class="subTitle">고객 지원</h2>
-    <nav id="lnb">
-      <h3 class="hidden">local navigation bar</h3>
-      <ul>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="online.html">온라인 문의</a></li>
-        <li><a href="contact.html">담당자 연락처</a></li>
-        <li><a href="">제품 카탈로그</a></li>
-        <li class="on"><a href="sample.html">샘플신청</a></li>
-      </ul>
-    </nav>
-    <div class="boardBox">
-      <div class="info">
-        <p>신청 내용에 개인 정보를 기재하시는 경우, 답변 완료 후 임의로 삭제될 수 있사오니 개인 정보 기재는 삼가주세요.</p>
-        <p><span class="require">*</span> 항목은 필수 입력항목입니다.</p>
+  <div id="subContents">
+    <div id="contents">
+      <div class="breadCrumb">
+        <ul>
+          <li>
+            <a href=""><span class="material-icons"> home </span></a>
+          </li>
+          <li><a href="">고객지원</a></li>
+          <li><a href="">샘플신청</a></li>
+        </ul>
       </div>
-      <table class="board write">
-        <colgroup>
-          <col style="width: 10%" />
-          <col style="width: 40%" />
-          <col style="width: 10%" />
-          <col style="width: 40%" />
-        </colgroup>
-        <tbody>
-          <tr>
-            <th scope="row">회사명<span class="require">*</span></th>
-            <td><input type="text" /></td>
-            <th scope="row" class="even">이름<span class="require">*</span></th>
-            <td><input type="text" /></td>
-          </tr>
-          <tr>
-            <th scope="row">휴대전화<span class="require">*</span></th>
-            <td><input type="text" /></td>
-            <th class="even">이메일<span class="require">*</span></th>
-            <td><input type="text" /></td>
-          </tr>
-          <tr>
-            <th>샘플종류<span class="require">*</span></th>
-            <td colspan="3">
-              <select name="" id="">
-                <option value="">샘플종류를 선택하세요.</option>
-                <option value="" class="opt">네오포레 CUP</option>
-                <option value="" class="opt">네오포레 STRAW</option>
-                <option value="" class="opt">네오포레 완충재</option>
-              </select>
-            </td>
-          </tr>
-          <tr>
-            <th>주소<span class="require">*</span></th>
-            <td colspan="3" class="address">
-              <div class="addr01">
-                <input type="text" id="postcode" class="readonly" placeholder="우편번호" readonly />
-                <button onclick="searchPostCode();"><span class="material-icons"> search </span>우편번호 검색</button>
-              </div>
-              <div class="addr02">
-                <input type="text" id="roadAddress" class="readonly" placeholder="주소" readonly />
-                <input type="text" class="etc" placeholder="나머지 주소 입력" />
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <th>제목<span class="require">*</span></th>
-            <td colspan="3"><input type="text" /></td>
-          </tr>
-          <tr>
-            <th class="content">내용<span class="require">*</span></th>
-            <td colspan="3"><textarea name="" id="" cols="30" rows="10"></textarea></td>
-          </tr>
-          <tr>
-            <th>첨부파일</th>
-            <td colspan="3">
-              <div class="flex">
-                <!-- <input type="text" class="address" placeholder="총 5MB 문서와 이미지 파일만 첨부 가능합니다." /> -->
-                <input type="file" />
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="agreeBox">
-        <div class="agree">
-          <div class="show">
-            <label class="checkbox">
-              <input type="checkbox" id="" />
-              <span class="label">개인정보 수집에 동의합니다.</span>
-            </label>
-            <button>전문 보기</button>
-          </div>
-          <div>
-            <label class="checkbox">
-              <input type="checkbox" id="" />
-              <span class="label">만 14세 이상입니다.</span>
-            </label>
-          </div>
+      <h2 class="subTitle">고객 지원</h2>
+      <nav id="lnb">
+        <h3 class="hidden">local navigation bar</h3>
+        <ul>
+          <li><a href="">FAQ</a></li>
+          <li><a href="">온라인 문의</a></li>
+          <li><a href="">담당자 연락처</a></li>
+          <li><a href="">제품 카탈로그</a></li>
+          <li class="on"><a href="">샘플신청</a></li>
+        </ul>
+      </nav>
+      <div class="boardBox">
+        <div class="info">
+          <p>신청 내용에 개인 정보를 기재하시는 경우, 답변 완료 후 임의로 삭제될 수 있사오니 개인 정보 기재는 삼가주세요.</p>
+          <p><span class="require">*</span> 항목은 필수 입력항목입니다.</p>
         </div>
-        <button type="submit">확인</button>
+        <table class="board write">
+          <colgroup>
+            <col style="width: 10%" />
+            <col style="width: 40%" />
+            <col style="width: 10%" />
+            <col style="width: 40%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th scope="row">회사명 <span class="require">*</span></th>
+              <td><input type="text" name="" id="" /></td>
+              <th scope="row" class="even">이름 <span class="require">*</span></th>
+              <td><input type="text" name="" id="" /></td>
+            </tr>
+            <tr>
+              <th scope="row">휴대전화 <span class="require">*</span></th>
+              <td><input type="text" name="" id="" /></td>
+              <th scope="row" class="even">이메일 <span class="require">*</span></th>
+              <td><input type="text" name="" id="" /></td>
+            </tr>
+            <tr>
+              <th scope="row">샘플종류 <span class="require">*</span></th>
+              <td colspan="3" class="harf">
+                <select name="" id="">
+                  <option value="">네오포레</option>
+                  <option value="">네오포레</option>
+                  <option value="">네오포레</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">주소 <span class="require">*</span></th>
+              <td class="address" colspan="3">
+                <div class="addr01">
+                  <input type="text" name="" id="postcode" class="readonly" readonly placeholder="우편번호" />
+                  <button onclick="searchPostCode();"><span class="material-icons"> search </span>우편번호 검색</button>
+                </div>
+                <div class="addr02">
+                  <input type="text" name="" id="roadAddress" class="readonly" readonly placeholder="주소" />
+                  <input type="text" name="" id="" placeholder="나머지 주소 입력" class="etc" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">제목 <span class="require">*</span></th>
+              <td colspan="3"><input type="text" name="" id="" /></td>
+            </tr>
+            <tr>
+              <th scope="row">내용 <span class="require">*</span></th>
+              <td colspan="3"><textarea name="" id="" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+              <th scope="row">첨부파일</th>
+              <td colspan="3"><input type="file" name="" id="" /></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="agreeBox">
+          <div class="agree">
+            <div class="show">
+              <label class="checkbox">
+                <input type="checkbox" name="" id="" />
+                <span class="label">개인정보 수집에 동의합니다.</span>
+              </label>
+              <button>전문보기</button>
+            </div>
+            <div>
+              <label class="checkbox">
+                <input type="checkbox" name="" id="" />
+                <span class="label">만 14세 이상입니다.</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit">확인</button>
+        </div>
       </div>
     </div>
   </div>
@@ -139,31 +135,9 @@
         // 우편번호와 주소 정보를 해당 필드에 넣는다.
         document.getElementById("postcode").value = data.zonecode;
         document.getElementById("roadAddress").value = roadAddr;
-        // document.getElementById("jibunAddress").value = data.jibunAddress;
-
-        // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
-        // if (roadAddr !== "") {
-        //   document.getElementById("sample4_extraAddress").value = extraRoadAddr;
-        // } else {
-        //   document.getElementById("sample4_extraAddress").value = "";
-        // }
-
-        // var guideTextBox = document.getElementById("guide");
-        // // 사용자가 '선택 안함'을 클릭한 경우, 예상 주소라는 표시를 해준다.
-        // if (data.autoRoadAddress) {
-        //   var expRoadAddr = data.autoRoadAddress + extraRoadAddr;
-        //   guideTextBox.innerHTML = "(예상 도로명 주소 : " + expRoadAddr + ")";
-        //   guideTextBox.style.display = "block";
-        // } else if (data.autoJibunAddress) {
-        //   var expJibunAddr = data.autoJibunAddress;
-        //   guideTextBox.innerHTML = "(예상 지번 주소 : " + expJibunAddr + ")";
-        //   guideTextBox.style.display = "block";
-        // } else {
-        //   guideTextBox.innerHTML = "";
-        //   guideTextBox.style.display = "none";
-        // }
+        //document.getElementById("jibunAddress").value = data.jibunAddress;
       },
     }).open();
   }
 </script>
-<? include("../include/footer.html") ?>
+<? include("../include/footer.html"); ?>
